@@ -14,6 +14,7 @@
 		C24D6F961A9E138300078D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24D6F951A9E138300078D4A /* Images.xcassets */; };
 		C24D6F991A9E138300078D4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24D6F971A9E138300078D4A /* LaunchScreen.xib */; };
 		C24D6FA51A9E138400078D4A /* WebViewExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24D6FA41A9E138400078D4A /* WebViewExamplesTests.swift */; };
+		C2A0DA981A9E1FDB008683B2 /* hello.html in Resources */ = {isa = PBXBuildFile; fileRef = C2A0DA971A9E1FDB008683B2 /* hello.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		C24D6F9E1A9E138400078D4A /* WebViewExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24D6FA31A9E138400078D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24D6FA41A9E138400078D4A /* WebViewExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewExamplesTests.swift; sourceTree = "<group>"; };
+		C2A0DA971A9E1FDB008683B2 /* hello.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = hello.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				C24D6F951A9E138300078D4A /* Images.xcassets */,
 				C24D6F971A9E138300078D4A /* LaunchScreen.xib */,
 				C24D6F8A1A9E138300078D4A /* Supporting Files */,
+				C2A0DA971A9E1FDB008683B2 /* hello.html */,
 			);
 			path = WebViewExamples;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C24D6F941A9E138300078D4A /* Main.storyboard in Resources */,
+				C2A0DA981A9E1FDB008683B2 /* hello.html in Resources */,
 				C24D6F991A9E138300078D4A /* LaunchScreen.xib in Resources */,
 				C24D6F961A9E138300078D4A /* Images.xcassets in Resources */,
 			);
@@ -411,6 +415,7 @@
 				C24D6FAA1A9E138400078D4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C24D6FAB1A9E138400078D4A /* Build configuration list for PBXNativeTarget "WebViewExamplesTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				C24D6FAD1A9E138400078D4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

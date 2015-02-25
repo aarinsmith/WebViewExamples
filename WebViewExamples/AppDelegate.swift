@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  WebViewExamples
 //
-//  Created by december melnyk on 2015-02-25.
+//  Created by Aarin Smith on 2015-02-25.
 //  Copyright (c) 2015 AarinSmith. All rights reserved.
 //
 

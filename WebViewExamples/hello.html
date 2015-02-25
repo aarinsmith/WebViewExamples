@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style type="text/css">
+            #canvas {
+                width:200px;
+                height:200px;
+                margin: 3% auto 0;
+            }
+        </style>
+        <script>
+            var canvasWidth = 200;
+            var canvasHeight = 200;
+            //draws the face
+            function drawFace(){
+                var canvas = document.getElementById('smiley');
+                var draw = canvas.getContext("2d");
+                //sets dimensions for head
+                var x = canvas.width / 2;
+                var y = canvas.height / 2;
+                var radius = 50;
+                var startAngle = 0;
+                var endAngle = 2*Math.PI;
+                //draws head
+                draw.beginPath();
+                draw.arc(x,y,radius,startAngle,endAngle);
+                draw.fillStyle='yellow';
+                draw.fill();
+                draw.lineWidth = 1;
+                draw.stroke();
+            }
+        //draws the sad mouth
+        function drawSadMouth(){
+            var canvas = document.getElementById('smiley');
+            var draw = canvas.getContext("2d");
+            //sets size of mouth
+            var x = canvas.width / 2;
+            var y = 140;
+            var radius = 30;
+            var startAngle = 1.1 * Math.PI;
+            var endAngle = 1.9 * Math.PI;
+            //draws mouth
+            draw.beginPath();
+            draw.arc(x, y, radius, startAngle, endAngle);
+            draw.lineWidth = 5;
+            draw.strokeStyle = 'black';
+            draw.stroke();
+        }
+        //draws the happy mouth
+        function drawHappyMouth(){
+            var canvas = document.getElementById('smiley');
+            var draw = canvas.getContext("2d");
+            var x = canvas.width / 2;
+            var y = 100;
+            var radius = 30;
+            var startAngle = 2 * Math.PI;
+            var endAngle = 1 * Math.PI;
+            //draws mouth
+            draw.beginPath();
+            draw.arc(x, y, radius, startAngle, endAngle);
+            draw.lineWidth = 5;
+            draw.strokeStyle = 'black';
+            draw.stroke();
+        }
+        // draws both eyes
+        function drawEyes(){
+            var canvas = document.getElementById('smiley');
+            var draw = canvas.getContext("2d");
+            var eye1 = -35;
+            var eye2 = 35;
+            var centerY = 10;
+            var radius = 9;
+            // save state
+            draw.save();
+            // translate context so height is 1/3'rd from top of enclosing circle
+            draw.translate(canvas.width / 2, canvas.height / 3);
+            // scale context horizontally by 50%
+            draw.scale(.6, 1);
+            // draw circle which will be stretched into an oval
+            draw.beginPath();
+            draw.arc(eye1, centerY, radius, 0, 2 * Math.PI, false);
+            draw.fillStyle = 'black';
+            draw.fill();
+            draw.beginPath();
+            draw.arc(eye2, centerY, radius, 0, 2 * Math.PI, false);
+            draw.fillStyle = 'black';
+            draw.fill();
+            // restore to original state
+            draw.restore();
+        }
+        //draws name
+        function drawName(){
+            var canvas = document.getElementById('smiley');
+            var draw = canvas.getContext("2d");
+            var x = 55;
+            var y = 175;
+            draw.fillStyle = 'black';
+            draw.font = 'bold 1em Arial';
+            draw.fillText("Aarin Smith", x, y);
+            
+        }
+        //animate mouth
+        var happy = true;
+        function animateSmiley(){
+            var canvas = document.getElementById('smiley');
+            var draw = canvas.getContext("2d");
+            //draws happy face if happy is true, sets happy to false
+            if (happy == true){
+                draw.clearRect(0,0,200,200);
+                drawFace();
+                drawEyes();
+                drawHappyMouth();
+                happy = false;
+            }
+            //draws frowny face if happy is false, sets happy to true
+            else{
+                draw.clearRect(0,0,200,200);
+                drawFace();
+                drawEyes();
+                drawSadMouth();
+                happy = true;
+            }
+        }
+        //calls animate smiley every 500 seconds
+        setInterval(animateSmiley, 500);
+        
+            </script>
+        
+    </head>
+    <body onload="animateSmiley();">
+        <div id="canvas"><canvas id="smiley" width='200px' height='200px'></canvas></body></div>
+    </body>
+</html>
